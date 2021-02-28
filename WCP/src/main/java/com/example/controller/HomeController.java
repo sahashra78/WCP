@@ -23,5 +23,20 @@ public class HomeController {
 		return "/item.html";
 	}
 	
+	@GetMapping("/login")
+	public String loginPage() {
+		return "/login.html";
+	}
+	
+	@GetMapping("/category")
+	public String categoryPage() {
+		return "/category.html";
+	}
+	
+	@GetMapping("/contact")
+	public String contactPage() {
+		return "/contact.html";
+	}
+
 	
 }

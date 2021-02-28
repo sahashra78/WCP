@@ -3,166 +3,179 @@
 <head th:fragment="head">
 <meta charset="ISO-8859-1">
 <title>WCC</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700,800" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700,800"
+	rel="stylesheet">
 <link rel="stylesheet" th:href="@{/CSS/Style.css}">
+<link rel="stylesheet" th:href="@{/CSS/Login.css}">
+<link rel="stylesheet" th:href="@{/CSS/CustomBootstrap.css}">
+<link rel="stylesheet" th:href="@{/CSS/Footer.css}">
 </head>
 <body>
 	<div th:fragment="nav">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#"><img src="/Images/best-seller.png" /></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+		<div class="navigation_bar">
+			<nav
+				class="navbar navbar-expand-lg fixed-top navbar-dark bgColor bg-dark">
+				<a class="navbar-brand" th:href="@{/}"> <img
+					src="/Images/best-seller.png" alt="logo of the company" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" th:href="@{/}">HOME</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              CATEGORIES
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">FURNITURE</a>
-              <a class="dropdown-item" href="#">ELECTRONICS</a>
-              <!-- <div class="dropdown-divider"></div>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active"><a class="nav-link"
+							th:href="@{/}">HOME</a></li>
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> CATEGORIES </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" th:href="@{category}">Furniture</a> <a
+									class="dropdown-item" th:href="@{category}">Electronics</a> <a
+									class="dropdown-item" th:href="@{category}">Appliances</a> <a
+									class="dropdown-item" th:href="@{category}">Kitchen</a> <a
+									class="dropdown-item" th:href="@{category}">Bed &amp; Bath</a>
+								<a class="dropdown-item" th:href="@{category}">Outdoor</a>
+								<!-- <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a> -->
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" th:href="@{/item}">CONTACT US</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">ABOUT US</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
+							</div></li>
+						<li class="nav-item"><a class="nav-link"
+							th:href="@{/contact}">CONTACT US</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">ABOUT
+								US</a></li>
+						<li class="nav-item"><a class="nav-link" th:href="@{/login}">LOGIN</a></li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search"
+							placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
+		</div>
 	</div>
 	<div th:fragment="footer">
 		<footer class="footer-area footer--light">
-  <div class="footer-big">
-    <!-- start .container -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-12">
-          <div class="footer-widget">
-            <div class="widget-about">
-              <img src="/Images/best-seller.png" alt="company logo" class="img-fluid company_logo">
-              <p>Our Company is one of the best Auction company where you can find best deals ever.</p>
-              <ul class="contact-details">
-                <li>
-                  <span class="icon-earphones"></span> Call Us:
-                  <a href="tel:987-654-3210">987-654-3210</a>
-                </li>
-                <li>
-                  <span class="icon-envelope-open"></span>
-                  <a href="#">support@wcc.com</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Ends: .footer-widget -->
-        </div>
-        <!-- end /.col-md-4 -->
-        <div class="col-md-3 col-sm-4">
-          <div class="footer-widget">
-            <div class="footer-menu footer-menu--1">
-              <h4 class="footer-widget-title">Categories</h4>
-              <ul>
-                <li>
-                  <a href="#">Furniture</a>
-                </li>
-                <li>
-                  <a href="#">Electronics</a>
-                </li>
-                <li>
-                  <a href="#">Utensils</a>
-                </li>
-              </ul>
-            </div>
-            <!-- end /.footer-menu -->
-          </div>
-          <!-- Ends: .footer-widget -->
-        </div>
-        <!-- end /.col-md-3 -->
+			<div class="footer-big">
+				<!-- start .container -->
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-12">
+							<div class="footer-widget">
+								<div class="widget-about">
+									<img src="/Images/best-seller.png" alt="company logo"
+										class="img-fluid company_logo">
+									<p>Our Company is one of the best Auction company where you
+										can find best deals ever.</p>
+									<ul class="contact-details">
+										<li><span class="icon-earphones"></span> Call Us: <a
+											href="tel:987-654-3210">987-654-3210</a></li>
+										<li><span class="icon-envelope-open"></span> <a href="#">support@wcc.com</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- Ends: .footer-widget -->
+						</div>
+						<!-- end /.col-md-4 -->
+						<div class="col-md-3 col-sm-4">
+							<div class="footer-widget">
+								<div class="footer-menu footer-menu--1">
+									<h4 class="footer-widget-title">Categories</h4>
+									<ul>
+										<li><a href="#">Furniture</a></li>
+										<li><a href="#">Electronics</a></li>
+										<li><a href="#">Utensils</a></li>
+									</ul>
+								</div>
+								<!-- end /.footer-menu -->
+							</div>
+							<!-- Ends: .footer-widget -->
+						</div>
+						<!-- end /.col-md-3 -->
 
-        <div class="col-md-3 col-sm-4">
-          <div class="footer-widget">
-            <div class="footer-menu">
-              <h4 class="footer-widget-title">Our Company</h4>
-              <ul>
-                <li>
-                  <a href="#">About Us</a>
-                </li>
-                <li>
-                  <a href="#">How It Works</a>
-                </li>
-                <li>
-                  <a href="#">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-            <!-- end /.footer-menu -->
-          </div>
-          <!-- Ends: .footer-widget -->
-        </div>
-        <!-- end /.col-lg-3 -->
+						<div class="col-md-3 col-sm-4">
+							<div class="footer-widget">
+								<div class="footer-menu">
+									<h4 class="footer-widget-title">Our Company</h4>
+									<ul>
+										<li><a href="#">About Us</a></li>
+										<li><a href="#">How It Works</a></li>
+										<li><a href="#">Contact Us</a></li>
+									</ul>
+								</div>
+								<!-- end /.footer-menu -->
+							</div>
+							<!-- Ends: .footer-widget -->
+						</div>
+						<!-- end /.col-lg-3 -->
 
-        <div class="col-md-3 col-sm-4">
-          <div class="footer-widget">
-            <div class="footer-menu no-padding">
-              <h4 class="footer-widget-title">Help Support</h4>
-              <ul>
-                <li>
-                  <a href="#">Support Forum</a>
-                </li>
-                <li>
-                  <a href="#">Terms &amp; Conditions</a>
-                </li>
-                <li>
-                  <a href="#">FAQs</a>
-                </li>
-              </ul>
-            </div>
-            <!-- end /.footer-menu -->
-          </div>
-          <!-- Ends: .footer-widget -->
-        </div>
-        <!-- Ends: .col-lg-3 -->
+						<div class="col-md-3 col-sm-4">
+							<div class="footer-widget">
+								<div class="footer-menu no-padding">
+									<h4 class="footer-widget-title">Help Support</h4>
+									<ul>
+										<li><a href="#">Support Forum</a></li>
+										<li><a href="#">Terms &amp; Conditions</a></li>
+										<li><a href="#">FAQs</a></li>
+									</ul>
+								</div>
+								<!-- end /.footer-menu -->
+							</div>
+							<!-- Ends: .footer-widget -->
+						</div>
+						<!-- Ends: .col-lg-3 -->
 
-      </div>
-      <!-- end /.row -->
-    </div>
-    <!-- end /.container -->
-  </div>
-  <!-- end /.footer-big -->
+					</div>
+					<!-- end /.row -->
+				</div>
+				<!-- end /.container -->
+			</div>
+			<!-- end /.footer-big -->
 
-  <div class="mini-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="copyright-text">
-            <p>&copy; 2021
-              <a href="#">WCC</a>. All rights reserved. Created by
-              <a href="#">World Class Coders</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+			<div class="mini-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="copyright-text">
+								<p>
+									&copy; 2021 <a href="#">WCC</a>. All rights reserved. Created
+									by <a href="#">World Class Coders</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</div>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<th:block th:fragment="scripts">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+		<script type="text/javascript" src="/./JS/all.min.js"></script>
+	<script type="text/javascript" src="/./JS/Contact.js"></script>
+	<script type="text/javascript" src="/./JS/Script.js"></script>
+</th:block>
 </html>
