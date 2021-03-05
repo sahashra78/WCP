@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head">
+</head>
+<body>
+	<div th:replace="fragments :: nav"></div>
+
+
+	<section>
+		<!-- 3 columns -->
+		<div id="category">
+			<h3 class="text-center p-3 m-5 display-5">FURNITURES</h3>
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-xs-12 col-sm-4">
+						<div class="card">
+							<a th:href="@{item}"> <img class="img-fluid card-img"
+								src="/Images/chair.jpg" alt="furniture category" /> <span
+								class="card-img-overlay container d-flex h-100"> <span
+									class="card-title font-weight-bold text-light p-3 mb-2 col text-center justify-content-center align-self-center">Chair</span>
+							</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="card">
+							<a th:href="@{item}"> <img class="img-fluid card-img"
+								src="/Images/chair.jpg" alt="fur" /> <span
+								class="card-img-overlay container d-flex h-100"> <span
+									class="card-title font-weight-bold text-light p-3 mb-2 col text-center justify-content-center align-self-center">Chair</span>
+							</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="card">
+							<a th:href="@{item}"> <img class="img-fluid card-img"
+								src="/Images/chair.jpg" alt="fur" /> <span
+								class="card-img-overlay container d-flex h-100"> <span
+									class="card-title font-weight-bold text-light p-3 mb-2 col text-center justify-content-center align-self-center">Chair</span>
+							</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="card">
+							<a th:href="@{item}"> <img class="img-fluid card-img"
+								src="/Images/chair.jpg" alt="furniture category" /> <span
+								class="card-img-overlay container d-flex h-100"> <span
+									class="card-title font-weight-bold text-light p-3 mb-2 col text-center justify-content-center align-self-center">Chair</span>
+							</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="card">
+							<a th:href="@{item}"> <img class="img-fluid card-img"
+								src="/Images/chair.jpg" alt="fur" /> <span
+								class="card-img-overlay container d-flex h-100"> <span
+									class="card-title font-weight-bold text-light p-3 mb-2 col text-center justify-content-center align-self-center">Chair</span>
+							</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="card">
+							<a th:href="@{item}"> <img class="img-fluid card-img"
+								src="/Images/chair.jpg" alt="fur" /> <span
+								class="card-img-overlay container d-flex h-100"> <span
+									class="card-title font-weight-bold text-light p-3 mb-2 col text-center justify-content-center align-self-center">Chair</span>
+							</span>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<div th:replace="fragments :: footer"></div>
+
+</body>
+<th:block th:replace="fragments :: scripts"></th:block>
+</html>
