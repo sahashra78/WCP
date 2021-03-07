@@ -23,5 +23,8 @@ public class HomeController {
 		return "/item.html";
 	}
 	
-	
+	@GetMapping("/login")
+	public String login() {
+		return "login.html";
+	}
 }

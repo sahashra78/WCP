@@ -33,7 +33,7 @@ alter table USER_ROLE
   references SEC_ROLE (roleId);
 
 insert into SEC_User (userName, encryptedPassword, ENABLED)
-values ('jon', '$2a$10$dmBY.Fn1uZfGYn0.5Z7rZe0delHFdQNBeCxBKr9WE2HD4xfx68TLG', 1);
+values ('jon', '$2a$10$ubmEjMYL/pw3T6/0Rn3C/OeIOiRWjKVZxMH4HaqS2m6MzvU1nWxa.', 1);
  
 insert into SEC_User (userName, encryptedPassword, ENABLED)
 values ('tod', '$2a$10$dmBY.Fn1uZfGYn0.5Z7rZe0delHFdQNBeCxBKr9WE2HD4xfx68TLG', 1);
