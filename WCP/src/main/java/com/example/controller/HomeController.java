@@ -38,5 +38,10 @@ public class HomeController {
 		return "/contact.html";
 	}
 
+	@GetMapping("/ownerItem")
+	public String ownerItem() {
+		return "/owner/item.html";
+	}
+	
 	
 }

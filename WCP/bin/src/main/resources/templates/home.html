@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head">
+</head>
+<body>
+	<div th:replace="fragments :: nav"></div>
+
+	<div class="jumbotron home_jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-4 font-weight-bold heading">Smart Auction</h1>
+			<h3 class="text-light">Great Deals, Happy Life</h3>
+			<a href="#category"><button class="btn-dark">Shop</button></a>
+		</div>
+	</div>
+
+	<section>
+		<!-- 3 columns -->
+		<div id="category">
+			<h2 class="text-center p-3 m-5 display-5">CATEGORIES</h2>
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-xs-12 col-sm-4">
+						<div class="card">
+							<a th:href="@{category}"> <img class="img-fluid card-img"
+								src="/Images/furniture.jpg" alt="furniture category" /> <span
+								class="card-img-overlay container d-flex h-100"> <span
+									class="card-title font-weight-bold text-light p-3 mb-2 col text-center justify-content-center align-self-center">Furniture</span>
+							</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="card">
+							<a th:href="@{category}"> <img class="img-fluid card-img"
+								src="/Images/Electronics.jpg" alt="fur" /> <span
+								class="card-img-overlay container d-flex h-100"> <span
+									class="card-title font-weight-bold text-light p-3 mb-2 col text-center justify-content-center align-self-center">Electronics</span>
+							</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="card">
+							<a th:href="@{category}"> <img class="img-fluid card-img"
+								src="/Images/Appliances.jpg" alt="fur" /> <span
+								class="card-img-overlay container d-flex h-100"> <span
+									class="card-title font-weight-bold text-light p-3 mb-2 col text-center justify-content-center align-self-center">Appliances</span>
+							</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="card">
+							<a th:href="@{category}"> <img class="img-fluid card-img"
+								src="/Images/Kitchen.jpg" alt="furniture category" /> <span
+								class="card-img-overlay container d-flex h-100"> <span
+									class="card-title font-weight-bold text-light p-3 mb-2 col text-center justify-content-center align-self-center">Kitchen</span>
+							</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="card">
+							<a th:href="@{category}"> <img class="img-fluid card-img"
+								src="/Images/Bed&Bath.jpg" alt="fur" /> <span
+								class="card-img-overlay container d-flex h-100"> <span
+									class="card-title font-weight-bold text-light p-3 mb-2 col text-center justify-content-center align-self-center">Bed
+										&amp; Bath</span>
+							</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="card">
+							<a th:href="@{category}"> <img class="img-fluid card-img"
+								src="/Images/Outdoor.jpg" alt="fur" /> <span
+								class="card-img-overlay container d-flex h-100"> <span
+									class="card-title font-weight-bold text-light p-3 mb-2 col text-center justify-content-center align-self-center">Outdoor</span>
+							</span>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<div th:replace="fragments :: footer"></div>
+
+</body>
+<th:block th:replace="fragments :: scripts"></th:block>
+</html>
